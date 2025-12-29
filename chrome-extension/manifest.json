@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YorkU Course Prof Insights",
+  "version": "0.1.0",
+  "description": "Embeds RateMyProfessor data into YorkU course selection tools.",
+
+  "permissions": ["storage"],
+
+  "host_permissions": [
+    "https://www.ratemyprofessors.com/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://w2prod.sis.yorku.ca/*"
+      ],
+      "js": ["content/yorkcourses.js"],
+      "css": ["ui/styles.css"]
+    }
+  ]
+}
