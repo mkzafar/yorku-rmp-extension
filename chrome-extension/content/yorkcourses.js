@@ -1,4 +1,4 @@
-console.log("YorkU RMP Extension loaded on York Courses");
+/* console.log("YorkU RMP Extension loaded on York Courses"); */
 
 /* ------------------ Utilities ------------------ */
 
@@ -20,7 +20,7 @@ function normalizeName(name) {
 
 async function fetchProfessorRating(firstName, lastName) {
   try {
-    const response = await fetch("http://localhost:3000/rmp", {
+    const response = await fetch("https://yorku-rmp-extension.onrender.com/rmp", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ firstName, lastName })
@@ -143,7 +143,7 @@ async function injectProfessorInfo() {
     const firstName = parts[0];
     const lastName = parts[1];
 
-    console.log("Fetching RMP for:", firstName, lastName);
+    /* console.log("Fetching RMP for:", firstName, lastName); */
 
     // placeholder while fetching
     const placeholder = document.createElement("span");

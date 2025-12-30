@@ -56,6 +56,6 @@ app.post("/rmp", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`RMP Proxy Server running on http://localhost:${PORT}`);
-});
+/* app.listen(PORT, () => {
+  console.log(`RMP Proxy Server running on https://yorku-rmp-extension.onrender.com/rmp:${PORT}`); 
+}); */
